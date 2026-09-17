@@ -91,7 +91,7 @@ fn stat_file(cli_arg: &CliArgs) -> Vec<Stats<'_>> {
                 content
                     .lines()
                     .map(|line| line.split_whitespace().count())
-                    //.count()  // 20260917 неверне значение с исхожнике !!!
+                    //.count()  // 20260917 неверне значение в исхожнике !!!
                     .sum()  // 20260917 верное значение !!!
             ),
             false => None,
@@ -148,7 +148,7 @@ fn main() {
             } else {
                 "".to_string()
             }
-        ) ; // Out: Path: "Cargo.toml" Lines: 6 Words: 6
-            //      Path: "Cargo.lock" Lines: 7 Words: 7
+        ) ; // Out: Path: "Cargo.toml" Lines: 6 Words: 11
+            //      Path: "Cargo.lock" Lines: 7 Words: 26
     }
 }
