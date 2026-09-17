@@ -91,7 +91,8 @@ fn stat_file(cli_arg: &CliArgs) -> Vec<Stats<'_>> {
                 content
                     .lines()
                     .map(|line| line.split_whitespace().count())
-                    .count()
+                    //.count()  // 20260917 неверне значение с исхожнике !!!
+                    .sum()  // 20260917 верное значение !!!
             ),
             false => None,
         } ;
